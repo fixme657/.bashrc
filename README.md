@@ -8,7 +8,7 @@ apt upgrade
 
 sudo nano .bashrc
 
- copy from
+ copy content from "add to the end of file" file
  
 
 
