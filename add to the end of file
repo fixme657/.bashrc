@@ -19,4 +19,3 @@ get_wan_ip() {
 get_local_ip
 get_wan_ip
 
-fi
