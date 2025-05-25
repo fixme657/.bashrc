@@ -1,21 +1,31 @@
 neofetch
+echo The Time And Date Is:""$(date)
+echo Hello $USER 
+#echo The Time And Date Is:""$(date)
 
+#Get If user In sudo Group
+
+if id -Gn $USER | grep -q '\bsudo\b'; then
+    echo "$USER is in the 'sudo' group."
+else
+    echo "User $USER is NOT in the 'sudo' group."
+    echo Run "sudo usermod -aG sudo [name-of-user]" 
+fi
+ 
 # Function to get local IP
-
-echo "find your ip"
+#echo "find your ip"
 get_local_ip() {
     local_ip=$(hostname -I | awk '{print $1}')
     echo "Local IP: $local_ip"
 }
 
 # Function to get WAN IP
-
 get_wan_ip() {
     wan_ip=$(curl -s ifconfig.me)
     echo "WAN IP: $wan_ip"
 }
-
 # Display the IPs
+
 get_local_ip
 get_wan_ip
-
+#echo The Time And Date Is:""$(date)
